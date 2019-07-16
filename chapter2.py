@@ -34,6 +34,10 @@ L = [s.lower() for s in L]
 
 # 生成器
 # L和g的区别仅在于最外层的[]和()，L是一个list，而g是一个generator
+print('==generator==')
 L = [x * x for x in range(10)]
 g = (x * x for x in range(10))
-print(next(g))
+for n in g:
+    print(n)
+
+

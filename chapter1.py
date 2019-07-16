@@ -39,5 +39,16 @@ print(d['Michael'])
 print('Michael' in d)
 
 # *args是可变参数，args接收的是一个tuple；
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+
+calc(1, 2)
+nums = [1, 2, 3]
+calc(*nums)
+# *nums表示把nums这个list的所有元素作为可变参数传进去。这种写法相当有用，而且很常见。
+
 #
 # **kw是关键字参数，kw接收的是一个dict。
